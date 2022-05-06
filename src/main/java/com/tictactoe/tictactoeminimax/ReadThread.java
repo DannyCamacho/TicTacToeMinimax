@@ -29,15 +29,13 @@ public class ReadThread extends Thread {
             try {
                 MinimaxMoveSend move = (MinimaxMoveSend)input.readObject();
                 client.print("\nGame: " + move.gameName() +
-                        " Move: " + move.move() +
-                        " Token: " + move.playerToken() +
-                        " Board: " + Arrays.toString(move.boardState()));
-
+                             " Token: " + move.playerToken() +
+                             " Board: " + Arrays.toString(move.boardState()));
                 PlayerMoveSend result = minimax.getMove(move);
                 client.print("\nGame: " + result.gameName() +
-                        " Move: " + result.move() +
-                        " Token: " + result.playerToken() +
-                        " Board: " + Arrays.toString(result.boardState()));
+                             " Move: " + result.move() +
+                             " Token: " + result.playerToken() +
+                             " Board: " + Arrays.toString(result.boardState()));
                 output.writeObject(result);
                 output.flush();
             } catch (IOException | ClassNotFoundException ex) {

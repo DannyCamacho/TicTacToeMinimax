@@ -80,7 +80,6 @@ public class Minimax {
                 }
             }
         }
-        System.out.println(boardState);
         return new PlayerMoveSend(gameName, playerToken, pos, move.boardState());
     }
 }

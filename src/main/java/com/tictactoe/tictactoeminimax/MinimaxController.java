@@ -3,7 +3,6 @@ package com.tictactoe.tictactoeminimax;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.MouseEvent;
 
 public class MinimaxController {
     @FXML
@@ -15,7 +14,7 @@ public class MinimaxController {
         ta.appendText(message);
     }
 
-    public void onStartClicked(MouseEvent mouseEvent) {
+    public void onStartClicked() {
         MinimaxClient client = new MinimaxClient("localhost", 8000, this);
         client.execute();
         startButton.setVisible(false);
