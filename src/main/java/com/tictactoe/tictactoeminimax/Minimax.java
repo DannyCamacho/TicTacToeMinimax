@@ -62,8 +62,6 @@ public class Minimax {
     }
 
     public PlayerMoveSend getMove(MinimaxMoveSend move) {
-        String gameName = move.gameName();
-        char playerToken = move.playerToken();
         char [] boardState = move.boardState();
         int maxEval = -999;
         int pos = -1;
@@ -80,6 +78,6 @@ public class Minimax {
                 }
             }
         }
-        return new PlayerMoveSend(gameName, playerToken, pos, move.boardState());
+        return new PlayerMoveSend(move.gameName(), move.playerToken(), pos, move.boardState());
     }
 }
