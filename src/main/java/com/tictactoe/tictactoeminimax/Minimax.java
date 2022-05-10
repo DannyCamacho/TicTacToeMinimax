@@ -4,9 +4,9 @@ import com.tictactoe.message.*;
 
 public class Minimax {
     private Boolean isMovesLeft(char[] boardState) {
-        return (boardState[0] == 0) && (boardState[1] == 0) && (boardState[2] == 0) &&
-               (boardState[3] == 0) && (boardState[4] == 0) && (boardState[5] == 0) &&
-               (boardState[6] == 0) && (boardState[7] == 0) && (boardState[8] == 0);
+        for (int i = 0; i < 9; ++i)
+            if (boardState[i] == 0) return true;
+        return false;
     }
 
     private int evaluate(char[] boardState) {
@@ -33,8 +33,7 @@ public class Minimax {
 
     private int miniMax(char[] boardState, Boolean isMax, int alpha, int beta) {
         int score = evaluate(boardState);
-        if (score != 0) return score;
-        if (!isMovesLeft(boardState)) return score;
+        if (score != 0 || !isMovesLeft(boardState)) return score;
 
         if (isMax) {
             int maxEval = -999;
