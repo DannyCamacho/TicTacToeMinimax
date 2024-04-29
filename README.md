@@ -1,6 +1,8 @@
 # Tic-Tac-Toe Online Minimax Manager
 Java application that connects to a main Tic-Tac-Toe Online server and determines the AI player's next move using a minimax algorithm with alpha-beta pruning.
 
+Tic-Tac-Toe Online Server: https://github.com/DannyCamacho/TicTacToeServer
+
 ## Launch Window
 ![image](https://github.com/DannyCamacho/TicTacToeMinimax/assets/91514165/27c1c59e-91f2-45d7-8437-3111f944cf39)
 
